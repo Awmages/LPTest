@@ -27,7 +27,13 @@ cursor.execute(query)
 for entry in cursor:
     blob_array = []
     blob = entry[0].hex()
-    
+    for i in range(0, len(blob), 8):
+        two_eval = twos_comp(blob[i:i+8])
+        blob_array.append(two_eval/1000)
+    plt.plot(blob_array)
+    plt.draw()
+    plt.pause(.1)
+    plt.clf()
 
 
 cnx.close()
