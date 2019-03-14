@@ -1,7 +1,7 @@
 import mysql.connector
 import matplotlib.pyplot as plt
 
-# Config file for MySQL Connector
+# Config settings for MySQL Connector
 config = {
     "user": "root",
     "password": "lptech",
